@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Libre Barcode 128' rel='stylesheet'>
+    <style>
+      div.focus{
+        position: sticky;
+        bottom: 150px;
+        right: -100px;
+        }
+
+        input[type="submit"]{
+        padding: 9px;
+        width: 10em;
+        height:3em;
+        }
+
+        #con{
+        border:0px solid black; 
+        width: 25%; 
+        height: 20%;
+      }
+      #music{
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 50%;
+      }
+
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+
+      .receiptBarcode {
+      margin: 10px 0;
+      text-align: center;
+      }
+
+      .barcode {
+      font-family: "Libre Barcode 128", cursive;
+      font-size: 42px;
+      text-align: center;
+      }
+      .logo {
+      text-align: center;
+      padding: 20px;
+      }
+     
+    </style>
+
+    <script>
+      function medical(){
+      const record = ["SEUYT65RTEFGEDJH","500","30","B770034",];
+      document.getElementById("demo1").value= record[1];
+      }
+    </script>
+  </head>
+
+<body>
+ <div id="demo1">
+   <table align="right" id="con">
+     <tr>
+       <td><p id="resultado"></p></td>
+       <td><p id="testing"></p></td>
+     </tr>
+
+     <tr>
+      <td><p id="perform"></p></td>
+      <td id="new"></td>
+     </tr>
+
+   </table>  
+  </div>
+
+<div>
+  <input type="text" name="pesos" id="pesos" value="">
+
+  <select id="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="opel">Opel</option>
+    <option value="audi">Audi</option>
+  </select>
+  
+  <input type="text" name="music" id="nice" value="">
+  <input type="text" name="gin" id="coun" value="">
+</div>
+
+
+<button onclick="conversorMonedas(demo1)">Submit</button>
+
+<script>
+  function conversorMonedas(demo1) {
+      var pesos = document.getElementById("pesos");
+      var car = document.getElementById("cars");
+      var rep = document.getElementById("nice");
+      var base = document.getElementById("coun");
+      document.getElementById("resultado").innerHTML = pesos.value;
+      document.getElementById("testing").innerHTML = car.value;
+      document.getElementById("perform").innerHTML = rep.value;
+      document.getElementById("Atla").innerHTML = base.value;
+  }
+</script>
+
+<input type="button" onclick="printDiv('demo1')" value="Print" />
+<script>
+  function printDiv(demo1){
+    var printContents = document.getElementById(demo1).innerHTML;
+    var originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+  }
+</script>
+
+<br><br>
+
+<h2>All About Music</h2>
+
+<table id="music">
+  <tr>
+    <th>Artist Name</th>
+    <th>Title of Song</th>
+    <th>Audio</th>
+  </tr>
+
+  <tr>
+    <td>Franglish</td>
+    <td>Baby Mama</td>
+    <td><audio controls>
+      <source src="audio/Franglish.ogg" type="audio/ogg">
+      <source src="audio/Franglish.mp3" type="audio/mpeg">
+    </audio></td>
+  </tr>
+
+  <tr>
+    <td>Bisa Kdei</td>
+    <td>Jwe</td>
+    <td><audio controls>
+      <source src="audio/Bisa Kdei - JWE (Official Video).mp3" type="audio/mpeg">
+    </audio></td>
+  </tr>
+
+  <tr>
+    <td>L.A.X</td>
+    <td>Sample</td>
+    <td><audio controls>
+      <source src="audio/L.A.X. - Sempe (Official Video).mp3" type="audio/mpeg">
+    </audio></td>
+  </tr>
+
+  <tr>
+    <td>Dj EddyBets</td>
+    <td>Why are you running</td>
+    <td><audio controls>
+      <source src="audio/Dj EddyBeatz - WHY ARE YOU RUNNING rmx.mp3" type="audio/mpeg">
+    </audio></td>
+  </tr>
+
+  <tr>
+    <td>Rayvanny ft GiMS</td>
+    <td>Senorita</td>
+    <td><audio controls>
+      <source src="audio/Rayvanny Ft GIMS - Señorita (Official Audio).mp3" type="audio/mpeg">
+    </audio></td>
+  </tr>
+
+  <tr>
+    <td>Dj Lewis</td>
+    <td>Apoutchou</td>
+    <td><audio controls>
+      <source src="audio/DJ LEWIS feat FIOR 2 BIOR _Apoutchou_ (Clip Officiel).mp3" type="audio/mpeg">
+    </audio></td>
+  </tr>
+
+  <tr>
+    <td>KDDO ft. Cassper Nyovest</td>
+    <td>EWallet</td>
+    <td><audio controls>
+      <source src="audio/KDDO - eWallet (Official Music Video) ft. Cassper Nyovest(1).mp3" type="audio/mpeg">
+    </audio></td>
+  </tr>
+
+  <tr>
+    <td>Mercy Chinwo</td>
+    <td>Obinasom</td>
+    <td><audio controls>
+      <source src="audio/Mercy Chinwo  Obinasom Official Video.mp3" type="audio/mpeg">
+    </audio></td>
+  </tr>
+
+</table>
+
+<div class="receiptBarcode">
+  <div class="barcode">
+    HelloCVSScript
+  </div>
+  2003 0998 9000 8730 21
+</div>
+
+<div>
+  <h1 class="logo">CVS/pharmacy</h1>
+</div>
+
+
+<p>Setting a default value to a function parameter (y=2).</p>
+<p id="demo"></p>
+
+<script>
+function myFunction(p,x=10, y = 3){
+  return p + x + y; 
+}
+document.getElementById("demo").innerHTML = myFunction(4);
+</script>
+ 
+</body>
+</html>
